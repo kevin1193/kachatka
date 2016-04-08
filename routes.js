@@ -5,7 +5,9 @@
 // Use the gravatar module, to turn email addresses into avatar images:
 
 var gravatar = require('gravatar');
-var rooms = [];
+var rooms  = [];
+var clients = [];
+var queue  = [];
 
 // Export a function, so that we can pass 
 // the app and io instances from the app.js file:
@@ -23,8 +25,16 @@ module.exports = function(app,io){
 	    if (rooms.length == 0) {
 			id = Math.round((Math.random() * 1000000));
 			rooms.push(id);
+			clients.splice(id, 0, 1);
 		} else {
 			id = rooms[0];
+			if (clients[id] === 2) {
+				id = Math.round((Math.random() * 1000000));
+				rooms.push(id);
+				clients.splice(id, 0, 1);
+			} else {
+				rooms.splice(0, 1);
+			}
 		}
 
 		// Redirect to the random room
