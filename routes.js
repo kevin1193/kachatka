@@ -5,6 +5,7 @@
 // Use the gravatar module, to turn email addresses into avatar images:
 
 var gravatar = require('gravatar');
+var rooms = [];
 
 // Export a function, so that we can pass 
 // the app and io instances from the app.js file:
@@ -18,9 +19,13 @@ module.exports = function(app,io){
 	});
 
 	app.get('/create', function(req,res){
-
-		// Generate unique id for the room
-		var id = Math.round((Math.random() * 1000000));
+		var id;
+	    if (rooms.length == 0) {
+			id = Math.round((Math.random() * 1000000));
+			rooms.push(id);
+		} else {
+			id = rooms[0];
+		}
 
 		// Redirect to the random room
 		res.redirect('/chat/'+id);
