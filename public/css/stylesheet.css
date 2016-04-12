@@ -15,6 +15,8 @@ body {
 	background-color: #f0f1f3;
 	color:#667073;
 	font: 16px/1.3 'Arial',sans-serif;
+	height: 100%;
+	width: 100%;
 }
 
 
@@ -51,6 +53,21 @@ body {
 	color: white;
 }
 
+.footer {
+	height: 4em;
+	color: grey;
+	background-color: salmon;
+
+}
+.footer-content {
+	text-align:center;
+	vertical-align:middle
+}
+.push {
+	height: 4em;
+	background-color: #f0f1f3;
+}
+
 
 
 /* ------ Invite ------ */
@@ -77,6 +94,7 @@ body {
 
 
 
+
 /* ------------ Section styles ------------ */
 
 
@@ -86,7 +104,7 @@ body {
 
 .homesection {
 	text-align:center;
-	margin-top:140px;
+	margin-top:110px;
 }
 
 .node {
