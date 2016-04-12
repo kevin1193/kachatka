@@ -18,7 +18,7 @@ $(function(){
 	var section = $(".section"),
 		footer = $("footer"),
 		onConnect = $(".connected"),
-		inviteSomebody = $(".invite-textfield"),
+		waitingForSomebody = $(".invite-textfield"),
 		personInside = $(".personinside"),
 		chatScreen = $(".chatscreen"),
 		left = $(".left"),
@@ -117,14 +117,19 @@ $(function(){
 	// Other useful 
 
 	socket.on('startChat', function(data){
-		console.log(data);
+
 		if(data.boolean && data.id == id) {
 
 			chats.empty();
+            var name1 = data.users[0];
+			var name2 = data.users[1];
 
 			if(name === data.users[0]) {
-
-				showMessage("youStartedChatWithNoMessages",data);
+                if (name1 == name2) {
+					showMessage("waitingForSomebody",data)
+				} else{
+					showMessage("youStartedChatWithNoMessages",data);
+				}
 			}
 			else {
 
@@ -256,13 +261,13 @@ $(function(){
 			onConnect.fadeIn(1200);
 		}
 
-		else if(status === "inviteSomebody"){
+		else if(status === "waitingForSomebody"){
 
 			// Set the invite link content
 			$("#link").text(window.location.href);
 
 			onConnect.fadeOut(1200, function(){
-				inviteSomebody.fadeIn(1200);
+				waitingForSomebody.fadeIn(1200);
 			});
 		}
 
@@ -278,7 +283,7 @@ $(function(){
 		else if(status === "youStartedChatWithNoMessages") {
 
 			left.fadeOut(1200, function() {
-				inviteSomebody.fadeOut(1200,function(){
+				waitingForSomebody.fadeOut(1200,function(){
 					noMessages.fadeIn(1200);
 					footer.fadeIn(1200);
 				});

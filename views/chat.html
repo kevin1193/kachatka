@@ -81,12 +81,15 @@
 
 		<div class="invite-textfield">
 
-			<h2>Oops, there are no other people in this chat!</h2>
-			<h5>Invite a friend by sending them this URL</h5>
+			<h2>Waiting for strangers ...</h2>
+			<h5>Invite a friend by sharing this url</h5>
 
 			<div class="link">
-				<a title="Invite a friend" href="" id="link"></a>
+				<a title="Share" href="" id="link"></a>
 			</div>
+			<form action="/create">
+				<input type="submit" class="newChat" value="NEW">
+			</form>
 
 		</div>
 
@@ -98,6 +101,9 @@
 				<h2><span class="nickname-left"></span> has left this chat.</h2>
 				<h5>Invite somebody else by sending them this page.</h5>
 			</div>
+			<form action="/create">
+				<input type="submit" class="newChat" value="NEW">
+			</form>
 
 		</div>
 
@@ -130,12 +136,12 @@
 	</section>
 
 	<footer>
-
+		<form action="/create">
+			<input type="submit" id="leave" value="LEAVE"/>
+		</form>
 		<form id="chatform">
-
 			<textarea id="message" placeholder="Write something.."></textarea>
 			<input type="submit" id="submit" value="SEND"/>
-
 		</form>
 
 	</footer>
