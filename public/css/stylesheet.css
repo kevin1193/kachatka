@@ -692,3 +692,208 @@ footer {
 	margin: 0 auto 200px;
 	overflow:hidden;
 }
+
+
+/* Portrait Media */
+@media screen
+and (device-width: 360px)
+and (device-height: 640px) {
+	.chatscreen {
+		display: none;
+		width: 320px;
+		margin: 0 auto 70px;
+		overflow: hidden;
+	}
+
+	.connected {
+		text-align: center;
+		display: block;
+		margin: auto;
+		width: 350px;
+		height: 575px;
+		background-color: #ffffff;
+		border-radius: 3px;
+		box-shadow: 0px 3px 3px #e3e4e6;
+		color: #637277;
+	}
+
+	.connected h2 {
+		padding-top: 30px;
+		margin-left: 85px;
+	}
+
+	.banner {
+		margin-bottom: 10px;
+	}
+
+	.infoConnected {
+		width: 100%;
+		text-align: left;
+		margin: auto;
+		display: block;
+	}
+
+	.loginForm{
+		margin-left: 85px;
+	}
+
+	#yourName {
+		width: 180px;
+	}
+
+	#creatorImage {
+		margin-right: 100px;
+		margin-left: 130px;
+	}
+
+	#yourEnter {
+		width: 200px;
+	}
+
+	.invite-textfield {
+		width: 100%;
+	}
+
+	.link {
+		width: 350px;
+	}
+
+	.invite-textfield .link {
+		width: 350px;
+	}
+
+	.nomessages {
+		width: 350px;
+		margin:auto;
+		height: 500px;
+	}
+
+	.info {
+		width: 350px;
+		margin:1px;
+	}
+
+	#noMessagesImage {
+		margin-right: 100px;
+		margin-left: 130px;
+	}
+
+	.nomessages h5 {
+		font-weight: normal;
+		margin-bottom: 10px;
+	}
+
+	#chatBox {
+		padding-top: 0px;
+	}
+
+	.chatscreen {
+		height: auto;
+		margin-bottom: 100px;
+	}
+
+	#leave {
+		margin-left: 0px;
+		width: 50px;
+		height: 100px;
+	}
+
+	.me {
+		height: auto;
+	}
+
+	.image {
+		height: 100px;
+	}
+
+	.chats .me p {
+		padding: 10px;
+		word-wrap: break-word;
+		height: auto;
+		float: right;
+		margin-left: 50px;
+		margin-bottom: 0px;
+		margin-top: 0px;
+	}
+
+	.image img {
+		width: 50px;
+		height: 50px;
+	}
+
+	.image b {
+		padding-top: 3px;
+	}
+
+	.timesent {
+		padding-top: 2px;
+	}
+
+	.chats .you p {
+		padding: 10px;
+		word-wrap: break-word;
+		height: auto;
+		float: right;
+		margin-right: 65px;
+		margin-bottom: 0px;
+		margin-top: 0px;
+	}
+
+	.personinside {
+		width: 350px;
+		margin:auto;
+		height: 500px;
+	}
+
+	.infoInside {
+		width: 100%;
+		text-align: left;
+		margin: auto;
+		display: block;
+	}
+
+	.personinside h2 {
+		padding-top: 30px;
+		margin-left: 85px;
+	}
+
+	#ownerImage {
+		margin-right: 100px;
+		margin-left: 130px;
+	}
+
+	#hisName {
+		width: 180px;
+	}
+
+	#hisEnter {
+		width: 200px;
+	}
+
+	.left {
+		width: 350px;
+		margin:auto;
+		height: 560px;
+	}
+
+	.left h2 {
+		padding-top: 30px;
+		margin-left: 45px;
+	}
+
+	.left h5 {
+		font-weight: normal;
+		margin-bottom: 10px;
+		margin-left: 45px;
+	}
+
+	.newChat {
+		width: 200px;
+	}
+
+	#leftImage {
+		margin-right: 100px;
+		margin-left: 130px;
+	}
+
+}

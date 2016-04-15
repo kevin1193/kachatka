@@ -225,12 +225,12 @@ $(function(){
 
 		var li = $(
 			'<li class=' + who + '>'+
+			    '<p></p>' +
 				'<div class="image">' +
 					'<img src=' + imgg + ' />' +
 					'<b></b>' +
 					'<i class="timesent" data-time=' + now + '></i> ' +
 				'</div>' +
-				'<p></p>' +
 			'</li>');
 
 		// use the 'text' method to escape malicious user input
