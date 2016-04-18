@@ -866,6 +866,9 @@ and (max-height: 640px) {
 
 	#message {
 		margin-top:10px;
+		word-wrap: break-word;
+		margin-right:10px;
+		width: 275px;
 	}
 
 }
