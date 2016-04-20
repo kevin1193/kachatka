@@ -78,7 +78,13 @@ module.exports = function(app,io){
 		// When the client emits 'login', save his name and avatar,
 		// and add them to the room
 		socket.on('login', function(data) {
-
+            var avatarUrls=[
+				'',
+				'https://robohash.org/'+data.user,
+				'https://robohash.org/'+data.user+'?set=set2',
+				'https://robohash.org/'+data.user+'?set=set3'
+			];
+			var randomIndex = Math.floor((Math.random() * 3) + 1);
 			var room = findClientsSocket(io, data.id);
 			// Only two people per room are allowed
 			if (room.length < 2) {
@@ -88,7 +94,7 @@ module.exports = function(app,io){
 
 				socket.username = data.user;
 				socket.room = data.id;
-				socket.avatar = gravatar.url(data.avatar, {s: '140', r: 'x', d: 'mm'});
+				socket.avatar = avatarUrls[randomIndex];
 
 				// Tell the person what he should use for an avatar
 				socket.emit('img', socket.avatar);
