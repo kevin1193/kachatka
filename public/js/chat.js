@@ -228,9 +228,8 @@ $(function(){
 			    '<p></p>' +
 				'<div class="image">' +
 					'<img src=' + imgg + ' />' +
-					'<b></b>' +
-					'<i class="timesent" data-time=' + now + '></i> ' +
 				'</div>' +
+			    '<i class="timesent" data-time=' + now + '></i> ' +
 			'</li>');
 
 		// use the 'text' method to escape malicious user input
@@ -238,7 +237,7 @@ $(function(){
 		li.find('b').text(user);
 
 		chats.append(li);
-
+		
 		messageTimeSent = $(".timesent");
 		messageTimeSent.last().text(now.fromNow());
 	}
