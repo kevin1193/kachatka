@@ -229,6 +229,8 @@ $(function(){
 				'<div class="image">' +
 					'<img src=' + imgg + ' />' +
 				'</div>' +
+				'<b></b>' +
+				' ' +
 			    '<i class="timesent" data-time=' + now + '></i> ' +
 			'</li>');
 
